@@ -1,0 +1,16 @@
+TEST     START   0x1000
+
+PRINT    MACRO   &ARG1=DATA1, &ARG2=DATA2
+         LDA     &ARG1
+         STA     &ARG2
+         MEND
+
+DATA1    WORD    10
+DATA2    WORD    20
+DATA3    WORD    30
+
+PRINT
+PRINT  DATA3
+PRINT  ,DATA1
+
+END      TEST

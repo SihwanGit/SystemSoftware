@@ -1,0 +1,13 @@
+TEST     START   0x1000
+BUF1     BYTE    X'00'
+BUF2     BYTE    X'AA'
+
+LOOPMAC  MACRO   &ARG
+LOOP     CLEAR   &ARG
+         ADD     &ARG
+         MEND
+
+LOOPMAC  A
+LOOPMAC  B
+
+END      TEST

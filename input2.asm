@@ -1,0 +1,16 @@
+TEST     START   0x1000
+BUF1     BYTE    X'00'
+BUF2     BYTE    X'AA'
+BUF3     BYTE    X'FF'
+
+MOVEGEN  MACRO   &REG, &NUM
+LABEL&NUM CLEAR  &REG
+          ADD    #&NUM
+          STCH   BUF&NUM
+          MEND
+
+MOVEGEN  A,1
+MOVEGEN  B,2
+MOVEGEN  C,3
+
+END      TEST

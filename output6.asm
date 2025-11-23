@@ -1,0 +1,19 @@
+TEST     START   0x1000
+LDA_1 &X
+STA_1 &Y
+LDA_1 MACRO MACRO &X
+STA_1 &Y
+         LDA &X
+         STA &Y
+LDA_2 &A
+STA_2 &B
+DATA1    WORD    10
+DATA2    WORD    20
+DATA3    WORD    30
+LDA_2 &X
+STA_2 &Y
+LDA_3 &X
+STA_3 &Y
+LDA_4 &X
+STA_4 &Y
+END      TEST
