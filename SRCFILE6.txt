@@ -1,0 +1,7 @@
+COPY    START   1000
+FIRST   LDA     ALPHA
+        ORG     2000
+ALPHA   RESW    1
+        ORG
+BETA    RESB    2
+        END     FIRST

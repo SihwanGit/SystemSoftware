@@ -1,0 +1,5 @@
+COPY    START   1000
+ALPHA   RESW    1
+BETA    EQU     ALPHA
+GAMMA   EQU     *
+        END     COPY

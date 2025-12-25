@@ -1,0 +1,9 @@
+COPY    START   1000
+ALPHA   RESW    1
+BETA    EQU     ALPHA+3
+GAMMA   EQU     BETA-1
+        ORG     ALPHA+6
+THIRD   RESB    2
+        ORG
+TOTAL   WORD    GAMMA+5
+        END     COPY

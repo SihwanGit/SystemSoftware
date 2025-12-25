@@ -1,0 +1,34 @@
+test3    START   1000
+first    STL     retadr
+         LDA     hun
+         STA     min
+         J       sum
+retadr   RESW    1
+sum      LDA     zero
+         STA     index
+loop     LDX     index
+         LDA     table, X
+         JSUB    compare
+         LDA     index
+         ADD     three
+         STA     index
+         COMP    count
+         JLT     loop
+         J       last
+table    WORD    12
+         WORD    9
+         WORD    8
+         WORD    2
+         WORD    6
+compare  COMP    min
+         JLT     allo
+         RSUB    
+allo     STA     min
+         RSUB
+count    WORD    15
+index    RESW    1
+min      RESW    1
+zero     WORD    0
+three    WORD    3
+hun      WORD    100
+last     END     first

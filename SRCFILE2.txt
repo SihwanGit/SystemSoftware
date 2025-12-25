@@ -1,0 +1,7 @@
+COPY    START   1000
+FIRST   LDA     =C'EOF'
+        STA     BUFFER
+        LDA     *
+        LTORG
+BUFFER  RESB    4096
+        END     FIRST
